@@ -34,6 +34,11 @@ const Dashboard = () => {
         }
       };
 
+      const reset = () => {
+          setStrikeCount(0);
+          setBallCount(0);
+      }
+
     return (
       <div className="dashboard">
         <Display
@@ -42,6 +47,12 @@ const Dashboard = () => {
         strikes={strikeCount}
         setStrikeCount={setStrikeCount}
       />
+      <div>
+        <button onClick={() => countStrikes()}>Strike</button>
+        <button onClick={() => countBalls()}>Ball</button>
+        <button onClick={() => countFouls()}>Foul</button>
+        <button onClick={() => reset()}>Hit</button>
+      </div>
       </div>
     );
   }
